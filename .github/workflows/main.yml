@@ -1,3 +1,14 @@
+#*****************************************
+#IMPORTANT: you have to run 
+#
+#    G-AC7
+#    /
+#    iac-vprofile
+#
+#    project first so that the vprofile-eks cluster is created!!!
+#*******************************************
+
+
 name: vprofile actions
 on: workflow_dispatch         #### you have to trigger this workflow manually // github->actions->vprofile-actions->run workflow
 env:
@@ -90,8 +101,8 @@ jobs:
             - name: Get Kube config file
               run: aws eks update-kubeconfig --region ${{ env.AWS_REGION }} --name ${{ env.EKS_CLUSTER }}
       
-            - name: Print config file
-              run: cat ~/.kube/config
+            #- name: Print config file
+            #  run: cat ~/.kube/config
       
             - name: Login to ECR
               run: kubectl create secret docker-registry regcred --docker-server=${{ secrets.REGISTRY }} --docker-username=AWS  --docker-password=$(aws ecr get-login-password) 
