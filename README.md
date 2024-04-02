@@ -1,3 +1,5 @@
+[![vprofile actions](https://github.com/G-AC7/vprofile-action/actions/workflows/main.yml/badge.svg)](https://github.com/G-AC7/vprofile-action/actions/workflows/main.yml)
+
 # Prerequisites
 #####
 - JDK 11
