@@ -3,7 +3,7 @@ on: workflow_dispatch         #### you have to trigger this workflow manually //
 env:
     AWS_REGION: us-east-1
     ECR_REPOSITORY: vprofileapp
-    EKS_CLUSTER: vprofile-eks-2111-2    # unique name
+    EKS_CLUSTER: vprofile-eks    # unique name
 
 jobs:
         Testing:
